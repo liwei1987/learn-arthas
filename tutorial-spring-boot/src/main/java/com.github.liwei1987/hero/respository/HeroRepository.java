@@ -27,6 +27,10 @@ public class HeroRepository {
         return heros;
     }
 
+    public long getTotalHeroCount() {
+        return heros.size();
+    }
+
     public Hero getHeroById(Long id) {
         Hero hero = null;
         Iterator<Hero> iterator = heros.iterator();

@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class HeroService {
 
-    private static final Logger logger = LoggerFactory.getLogger(HeroService.class);
+    private static final Logger logger = LoggerFactory.getLogger(HeroService.class.getSimpleName());
 
     @Autowired
     private HeroRepository heroRepository;
@@ -26,6 +26,15 @@ public class HeroService {
      */
     public List<Hero> getAllHeros() {
         return heroRepository.getAllHeros();
+    }
+
+    /**
+     * 获取英雄总数
+     *
+     * @return 英雄总数
+     */
+    public long getTotalHeroCount() {
+        return heroRepository.getTotalHeroCount();
     }
 
     /**
