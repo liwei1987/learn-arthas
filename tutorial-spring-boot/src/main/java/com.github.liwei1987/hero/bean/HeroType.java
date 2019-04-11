@@ -1,32 +1,18 @@
 package com.github.liwei1987.hero.bean;
 
-public enum HeroType {
+public class HeroType {
 
-    Mage(1, "法师"),
-    Warrior(2, "战士"),
-    Archer(3, "射手");
+    private String name;
 
-    private int typeId;
-    private String typeName;
-
-    HeroType(int typeId, String typeName) {
-        this.typeId = typeId;
-        this.typeName = typeName;
+    public HeroType(String name) {
+        this.name = name;
     }
 
-    public int getTypeId() {
-        return typeId;
+    public String getName() {
+        return name;
     }
 
-    public void setTypeId(int typeId) {
-        this.typeId = typeId;
-    }
-
-    public String getTypeName() {
-        return typeName;
-    }
-
-    public void setTypeName(String typeName) {
-        this.typeName = typeName;
+    public void setName(String name) {
+        this.name = name;
     }
 }
